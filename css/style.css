@@ -1,58 +1,70 @@
 /* General Style Imports */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+/* General Style Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    outline: none;
-    border: none;
-    transition: all 0.2s linear;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.2s linear;
 }
 
 body, html {
-    scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background: #FFF9C7;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #FFF9C7;
 }
 
-/* Header Styles */
-/* Header Styles */
-/* Header Styles */
-.header {
-  position: relative; /* Position it absolutely within the page */
+/* Banner Section */
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Full height of viewport */
+  width: 100vw;
+  background: url('/images/herosection.JPG') center/cover no-repeat; /* Replace with your image */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1F628E; /* Transparent background initially */
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Smoked overlay */
+  z-index: 1;
 }
 
-.nav-container {
+.banner-navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
+  align-items: center; /* Ensures links stay aligned vertically */
+  padding: 0 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
-.header .logo img {
-  height: 40px; /* Original height */
+.banner-navbar .logo img {
+  height: 85px; /* Larger logo */
   width: auto;
-  transform: scale(1.5); /* Increase the scale of the logo */
-  transform-origin: center; /* Keep scaling centered */
+  margin-left: 50px;
 }
 
 .navbar {
   display: flex;
   gap: 2rem;
+  align-items: center; /* Keep links aligned vertically */
 }
 
 .navbar a {
@@ -66,53 +78,24 @@ body, html {
   color: #D8BF9F;
 }
 
-/* Hero Section */
-/* Hero Section */
-/* Hero Section */
-/* Hero Section */
-.banner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center;
-  text-align: center;
-  height: calc(100vh - 60px); /* Adjust height for the viewport */
-  width: 100vw;
-  background: url('/images/herosection.JPG') center/cover no-repeat; /* Replace with your image path */
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Smoked overlay with darker opacity */
-  z-index: 1;
-}
-
-/* Hero Section */
 .banner-content {
   position: relative;
   z-index: 2;
   color: white;
   text-align: center;
-  margin-top: -100px; /* Move content up */
   padding: 20px;
 }
 
 .banner-content h1 {
   font-family: "Lilita One", sans-serif;
-  font-size: 3rem; /* Adjust font size */
-  margin-bottom: 10px; /* Reduce spacing */
+  font-size: 3rem;
+  margin-bottom: 10px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .banner-content p {
-  font-size: 1.2rem; /* Adjust font size */
-  margin-bottom: 300px; /* Add margin for spacing */
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   line-height: 1.4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -127,13 +110,13 @@ body, html {
   text-decoration: none;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease, color 0.3s ease;
-  margin-top: 20px; /* Create more space below the description */
 }
 
 .get-started-button:hover {
   background: #FFF9C7;
   color: #1F628E;
 }
+
 
 
 
