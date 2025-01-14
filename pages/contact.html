@@ -1,357 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Contact Us</title>
-    <style>
-        /* General Style Imports */
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-/* General Style Imports */
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-        body {
-            background: linear-gradient(180deg, white, #FFF9C7 70%, #BBDEFB);
-            font-family: "Montserrat", sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            background-color: #003262;
-            color: #fff;
-            position: fixed;
-            width: 90%;
-            z-index: 10;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 20px;
-        }
-
-        .banner {
-            height: 300px;
-            background: url('contactbanner.png') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-            margin-top: 70px;
-        }
-
-        .banner h1 {
-            font-family: "Lilita One", sans-serif;
-            font-size: 3rem;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .form-section {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    padding: 30px;
-    max-width: 700px;
-            width: 100%;
-            position: relative;
-        }
-
-        .form-section h2 {
-            font-size: 2rem;
-            color: #1F628E;
-            margin-bottom: 1rem;
-            font-family: "Lilita One", sans-serif;
-        }
-
-        .form-section p {
-            color: #444;
-            font-size: 1rem;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            gap: 10px;
-            justify-content: space-between;
-        }
-
-        .form-group input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  background-color: #f7f7f7;
-  height: auto;
-  min-height: 20px;
-
-}
-
-        input, textarea {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-            background-color: #f7f7f7;
-        }
-
-        textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        button {
-            background: #1F628E;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 25px;
-            padding: 12px 24px;
-            cursor: pointer;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        button:hover {
-            background: #1565C0;
-        }
-
-        footer {
-            background: linear-gradient(180deg, white, #E3F2FD);
-            padding: 3rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .footer-left {
-            flex: 1;
-            text-align: left;
-        }
-
-        .footer-left h3 {
-            font-size: 1.8rem;
-            color: #1F628E; /* Navy blue */
-            margin-bottom: 1rem;
-            font-family: "Lilita One", sans-serif;
-        }
-
-        .footer-email {
-            font-size: 1rem;
-            color: #1565C0; /* Blue */
-            text-decoration: none;
-        }
-
-        .footer-email:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-
-        .footer-right {
-            flex: 1;
-            text-align: right;
-        }
-
-        .footer-nav {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 1rem;
-            display: flex;
-            gap: 1.5rem;
-            justify-content: flex-end;
-        }
-
-        .footer-nav a {
-            font-size: 1rem;
-            color: #1565C0; /* Blue */
-            text-decoration: none;
-        }
-
-        .footer-nav a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background-color: #1F628E; /* Navy blue */
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .footer-button:hover {
-            background-color: #1565C0; /* Lighter blue */
-        }
-
-        .toggle-buttons {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .toggle-buttons button {
-            padding: 5px 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: #1F628E;
-            color: white;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
-
-        .toggle-buttons button.active {
-            background-color: #1565C0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/contact.css">
+  <title>Contact Us</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#"><img src="images/logo_spark.png" alt="Cub Consulting Logo" style="height: 50px;"></a>
+    <section class="banner" id="services-banner">
+        <div class="banner-navbar">
+          <a href="/index.html" class="logo">
+            <img src="/images/logo_spark.png" alt="Cub Consulting Logo">
+          </a>
+          <nav class="navbar">
+            <a href="/index.html">Services</a>
+            <a href="#team">Our Team</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#apply">Apply</a>
+          </nav>
         </div>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Our Team</a>
-            <a href="#">Contact</a>
-            <a href="#">Apply</a>
+        <div class="banner-content">
+          <h1>Contact Us</h1>
+          <p>Have questions or need more information? Get in touch with our team, and we'll be happy to assist you in any way we can.</p>
         </div>
-    </nav>
+      </section>
 
-    <div class="banner">
-        <h1>Contact Us</h1>
+  <div class="content">
+    <div id="client-form" class="form-section">
+      <div class="toggle-buttons">
+        <button id="client-button" class="active" onclick="switchForm('client')">Client</button>
+        <button id="applicant-button" onclick="switchForm('applicant')">Applicant</button>
+      </div>
+      <h2>Client Inquiries</h2>
+      <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
+      <form>
+        <div class="form-group">
+          <input type="text" id="client-name" name="name" placeholder="Name *" required>
+          <input type="email" id="client-email" name="email" placeholder="Email *" required>
+        </div>
+        <input type="text" id="client-subject" name="subject" placeholder="Subject *" required>
+        <textarea id="client-message" name="message" placeholder="Message *" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <div class="content">
-        <div id="client-form" class="form-section">
-            <div class="toggle-buttons">
-                <button id="client-button" class="active" onclick="switchForm('client')">Client</button>
-                <button id="applicant-button" onclick="switchForm('applicant')">Applicant</button>
-            </div>
-            <h2>Client Inquiries</h2>
-            <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
-            <form>
-                <div class="form-group">
-                    <input type="text" id="client-name" name="name" placeholder="Name *" required>
-                    <input type="email" id="client-email" name="email" placeholder="Email *" required>
-                </div>
-                <input type="text" id="client-subject" name="subject" placeholder="Subject *" required>
-                <textarea id="client-message" name="message" placeholder="Message *" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+    <div id="applicant-form" class="form-section" style="display: none;">
+      <div class="toggle-buttons">
+        <button id="client-button" onclick="switchForm('client')">Client</button>
+        <button id="applicant-button" class="active" onclick="switchForm('applicant')">Applicant</button>
+      </div>
+      <h2>Applicant Inquiries</h2>
+      <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
+      <form>
+        <div class="form-group">
+          <input type="text" id="applicant-name" name="name" placeholder="Name *" required>
+          <input type="email" id="applicant-email" name="email" placeholder="Email *" required>
         </div>
-
-        <div id="applicant-form" class="form-section" style="display: none;">
-            <div class="toggle-buttons">
-                <button id="client-button" onclick="switchForm('client')">Client</button>
-                <button id="applicant-button" class="active" onclick="switchForm('applicant')">Applicant</button>
-            </div>
-            <h2>Applicant Inquiries</h2>
-            <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
-            <form>
-                <div class="form-group">
-                    <input type="text" id="applicant-name" name="name" placeholder="Name *" required>
-                    <input type="email" id="applicant-email" name="email" placeholder="Email *" required>
-                </div>
-                <input type="text" id="applicant-subject" name="subject" placeholder="Subject *" required>
-                <input type="text" id="applicant-class-year" name="class-year" placeholder="Class Year (e.g., 2024) *" required>
-                <textarea id="applicant-message" name="message" placeholder="Message *" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <input type="text" id="applicant-subject" name="subject" placeholder="Subject *" required>
+        <input type="text" id="applicant-class-year" name="class-year" placeholder="Class Year (e.g., 2024) *" required>
+        <textarea id="applicant-message" name="message" placeholder="Message *" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
+  </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <h3>Let's work together!</h3>
-                <a href="mailto:cubconsultingteam@gmail.com" class="footer-email">cubconsultingteam@gmail.com</a>
-                <div class="social-icons">
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                        <img src="images/Instagram Logo Transparent.png" alt="Instagram">
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                        <img src="images/LinkedIn logo transparent.png" alt="LinkedIn">
-                    </a>
-                </div>
-            </div>
-            <div class="footer-right">
-                <ul class="footer-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#our-team">Services</a></li>
-                    <li><a href="#clients">Our Team</a></li>
-                    <li><a href="#services">Contact Us</a></li>
-                    <li><a href="#apply">Apply</a></li>
-                </ul>
-                <a href="#contact" class="footer-button">Work with us →</a>
-            </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>Let's work together!</h3>
+        <a href="mailto:cubconsultingteam@gmail.com" class="footer-email">cubconsultingteam@gmail.com</a>
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="images/Instagram Logo Transparent.png" alt="Instagram">
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <img src="images/LinkedIn logo transparent.png" alt="LinkedIn">
+          </a>
         </div>
-    </footer>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our-team">Services</a></li>
+          <li><a href="#clients">Our Team</a></li>
+          <li><a href="#services">Contact Us</a></li>
+          <li><a href="#apply">Apply</a></li>
+        </ul>
+        <a href="#contact" class="footer-button">Work with us →</a>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        function switchForm(type) {
-            const clientForm = document.getElementById('client-form');
-            const applicantForm = document.getElementById('applicant-form');
-
-            if (type === 'client') {
-                clientForm.style.display = 'block';
-                applicantForm.style.display = 'none';
-            } else {
-                clientForm.style.display = 'none';
-                applicantForm.style.display = 'block';
-            }
-        }
-    </script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>

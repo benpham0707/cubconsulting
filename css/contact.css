@@ -1,0 +1,296 @@
+/* General Style Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: white;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  width: 100vw;
+  background: url('/images/contactus.JPG') center/cover no-repeat;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.banner-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.banner-navbar .logo img {
+  height: 85px;
+  width: auto;
+  margin-left: 50px;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 16px;
+  color: #FFF9C7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #D8BF9F;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 1rem;
+}
+
+.banner-content h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.form-section {
+  background: #FFF9C7;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.form-section h2 {
+  font-size: 3.2rem;
+  color: #1F628E;
+  margin-bottom: 1rem;
+  font-family: "Lilita One", sans-serif;
+}
+
+.form-section p {
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  background-color: #f7f7f7;
+  height: auto;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  background-color: #f7f7f7;
+}
+
+textarea {
+  resize: none;
+  height: 180px; /* Increased height */
+}
+
+button {
+  background: #1F628E;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #1565C0;
+}
+
+footer {
+  background: linear-gradient(180deg, white, #E3F2FD);
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.footer-left {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-left h3 {
+  font-size: 1.8rem;
+  color: #1F628E;
+  margin-bottom: 1rem;
+  font-family: "Lilita One", sans-serif;
+}
+
+.footer-email {
+  font-size: 1rem;
+  color: #1565C0;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.footer-nav a {
+  font-size: 1rem;
+  color: #1565C0;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #1F628E;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #1565C0;
+}
+
+.toggle-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle-buttons button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1F628E;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.toggle-buttons button.active {
+  background-color: #1565C0;
+}

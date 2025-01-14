@@ -294,7 +294,7 @@ body, html {
   
   .breakdown-image img {
     max-width: 110%; /* Slight zoom */
-    transform: scale(1.3); /* Additional zoom to fill space */
+    transform: scale(1.5); /* Additional zoom to fill space */
     object-fit: cover; /* Ensures proper cropping */
     transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
   }
