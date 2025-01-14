@@ -98,7 +98,7 @@ body, html {
 
 /* Services Section */
 .services-section {
-  background-color: white;
+    background: linear-gradient(180deg, white, #FFF9C7);
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -109,17 +109,25 @@ body, html {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #1F628E;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: "Lilita One", sans-serif;
 }
 
+.services-intro {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0 auto 3rem;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create 4 columns */
-  gap: 1.5rem; /* Space between cards */
+  grid-template-columns: repeat(4, 1fr); /* Always create 4 columns */
+  gap: 1.5rem; /* Adjust spacing between cards */
   justify-content: center;
 }
 
@@ -129,24 +137,17 @@ body, html {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 250px; /* Fixed width */
-  height: 300px; /* Fixed height for uniformity */
+  font-size: 1rem; /* Adjust font size for readability */
+  width: 280px; /* Fixed width for consistency */
+  height: 260px; /* Fixed height for consistency */
+  margin: auto; /* Center cards in their grid cells */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-
-.service-card img {
-  width: 60px; /* Icon size */
-  height: auto;
-  margin-bottom: 10px;
+  justify-content: space-between; /* Ensures content spacing is consistent */
 }
 
 .service-card h3 {
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* Slightly larger header size */
   color: #1F628E;
   margin-bottom: 0.5rem;
   font-family: "Lilita One", sans-serif;
@@ -155,26 +156,40 @@ body, html {
 .service-card ul {
   list-style: none;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1rem; /* Adjusted text size */
   color: #444;
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1.5; /* Increased line height for better spacing */
 }
 
 .service-card ul li {
   margin-bottom: 0.3rem;
+  white-space: nowrap; /* Prevent line breaks for bullet points */
+}
+
+.service-card img {
+  width: 60px; /* Adjusted icon size */
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+
+  .service-card {
+    width: 90%; /* Make cards responsive */
+    height: auto; /* Allow height to adjust dynamically for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+    grid-template-columns: 1fr;
   }
 
   .banner-navbar .logo img {
@@ -184,4 +199,213 @@ body, html {
   .navbar {
     gap: 1rem;
   }
+}
+
+.project-breakdown-section {
+    background: linear-gradient(180deg, #FFF9C7, white);
+    padding: 4rem 2rem;
+  }
+  
+  .project-breakdown-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centers the entire content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 2rem; /* Adds space between the sections */
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .project-breakdown-header {
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 3.2rem;
+    color: #1F628E;
+    font-family: "Lilita One", sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.4rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  .breakdown-content {
+    display: flex;
+    justify-content: flex-start; /* Align the content to the left */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .breakdown-numbers {
+    flex: 1; /* Adjust size ratio for better alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text in the left section */
+    gap: 1rem; /* Adds space between rows */
+    text-align: center; /* Aligns all text centrally */
+  }
+  
+  .breakdown-row {
+    display: flex;
+    justify-content: center; /* Centers rows within the section */
+    gap: 2rem; /* Adds space between items */
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  
+  .breakdown-item {
+    text-align: center; /* Centers each individual item */
+  }
+  
+  .breakdown-item h3 {
+    font-size: 3rem;
+    color: #1F628E;
+    font-family: "Lilita One", sans-serif;
+  }
+  
+  .breakdown-item p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .breakdown-item.family-item h3 {
+    font-size: 5rem; /* Larger number for emphasis */
+  }
+  
+  .breakdown-item.family-item p {
+    font-size: 2rem; /* Larger "Family" text */
+  }
+  
+  .breakdown-image {
+    flex: 1; /* Keeps proportional size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Ensures a consistent max width */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  .breakdown-image img {
+    max-width: 110%; /* Slight zoom */
+    transform: scale(1.3); /* Additional zoom to fill space */
+    object-fit: cover; /* Ensures proper cropping */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+.footer {
+    background: linear-gradient(180deg, white, #E3F2FD); /* Light gradient background */
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-left h3 {
+    font-size: 1.8rem;
+    color: #1F628E; /* Navy blue */
+    margin-bottom: 1rem;
+    font-family: "Lilita One", sans-serif;
+}
+
+.footer-email {
+    font-size: 1rem;
+    color: #1565C0; /* Blue */
+    text-decoration: none;
+}
+
+.footer-email:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+}
+
+.footer-nav a {
+    font-size: 1rem;
+    color: #1565C0; /* Blue */
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #1F628E; /* Navy blue */
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #1565C0; /* Lighter blue */
 }
