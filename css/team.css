@@ -62,7 +62,8 @@
   .navbar {
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: center; /* Keep links aligned vertically */
+    margin-right: 50px;
   }
   
   .navbar a {
@@ -85,7 +86,7 @@
   
   .banner-content h1 {
     font-family: "Lilita One", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     margin-bottom: 10px;
   }
@@ -113,7 +114,7 @@
   }
   
   #team-section h1 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     color: #1F628E; /* Navy blue */
     margin-bottom: 1rem;
     font-family: "Lilita One", sans-serif;
