@@ -105,7 +105,8 @@
   #team-section {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9; /* Light gray for subtle section contrast */
+    /* Light gray for subtle section contrast */
+    background: linear-gradient(180deg, white, #FFF9C7);
   }
   
   #team-section .container {
@@ -141,97 +142,140 @@
   
 
   .footer {
-    background: linear-gradient(180deg, white, #E3F2FD); /* Light gradient background */
+    background: #1F628E; /* Navy blue background */
     padding: 3rem 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the footer content horizontally */
     align-items: center;
-    flex-direction: column;
     text-align: center;
-}
-
-.footer-content {
+    color: white; /* Default text color for footer */
+  }
+  
+  .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: flex-start; /* Align content to the top */
     max-width: 1200px;
     width: 100%;
-}
-
-.footer-left {
+    gap: 20px;
+  }
+  
+  .footer-left {
     flex: 1;
     text-align: left;
-}
-
-.footer-left h3 {
-    font-size: 1.8rem;
-    color: #1F628E; /* Navy blue */
-    margin-bottom: 1rem;
-    font-family: "Lilita One", sans-serif;
-}
-
-.footer-email {
-    font-size: 1rem;
-    color: #1565C0; /* Blue */
-    text-decoration: none;
-}
-
-.footer-email:hover {
-    text-decoration: underline;
-}
-
-.social-icons {
-    margin-top: 1rem;
     display: flex;
-    gap: 1rem;
-}
-
-.social-icons img {
+    flex-direction: column;
+    gap: 15px; /* Space between sections */
+  }
+  
+  .work-together {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and logo */
+  }
+  
+  .work-together h3 {
+    font-size: 1.8rem;
+    color: #FFF9C7; /* Light yellow text */
+    font-family: "Lilita One", sans-serif;
+    margin: 0;
+  }
+  
+  .footer-logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .social-and-email {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between items */
+  }
+  
+  .social-and-email img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
+  }
+  
+  .social-and-email img:hover {
     transform: scale(1.2);
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.footer-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: flex-end;
-}
-
-.footer-nav a {
+  }
+  
+  .social-and-email span {
     font-size: 1rem;
-    color: #1565C0; /* Blue */
+    color: #FFF9C7; /* Light yellow separator */
+  }
+  
+  .footer-email {
+    font-size: 1rem;
+    color: #D8BF9F; /* Lighter blue text for email */
     text-decoration: none;
-}
-
-.footer-nav a:hover {
+  }
+  
+  .footer-email:hover {
     text-decoration: underline;
-}
-
-.footer-button {
+  }
+  
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    gap: 15px; /* Space between button and nav links */
+  }
+  
+  .footer-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #1F628E; /* Navy blue */
-    color: white;
+    background-color: #FFF9C7; /* Light yellow button */
+    color: #1F628E; /* Navy blue text */
     border-radius: 20px;
     text-decoration: none;
     font-size: 1rem;
     transition: background 0.3s ease;
-}
+  }
+  
+  .footer-button:hover {
+    background-color: #D8BF9F; /* Hover color for button */
+    color: white; /* Hover text color */
+  }
+  
+  .footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-nav a {
+    font-size: 1rem;
+    color: #FFF9C7; /* Light yellow links */
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+    color: #D8BF9F; /* Slightly lighter yellow on hover */
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: #FFF9C7; /* Light yellow text */
+    margin: 0;
+  }
 
-.footer-button:hover {
-    background-color: #1565C0; /* Lighter blue */
-}
+  /* Fade-in effect for text */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Active state to trigger the fade-in */
+  .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

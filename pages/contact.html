@@ -7,23 +7,23 @@
   <title>Contact Us | Cub Consulting @ Berkeley</title>
 </head>
 <body>
-    <section class="banner" id="services-banner">
-        <div class="banner-navbar">
-          <a href="/index.html" class="logo">
-            <img src="/images/logo_spark.png" alt="Cub Consulting Logo">
-          </a>
-          <nav class="navbar">
-            <a href="services.html">Services</a>
-            <a href="team.html">Our Team</a>
-            <a href="#section-banner">Contact Us</a>
-            <a href="apply.html">Apply</a>
-          </nav>
-        </div>
-        <div class="banner-content">
-          <h1>CONTACT US</h1>
-          <p>Have questions or need more information? Get in touch with our team, and we'll be happy to assist you in any way we can.</p>
-        </div>
-      </section>
+  <section class="banner" id="services-banner">
+    <div class="banner-navbar">
+      <a href="/index.html" class="logo">
+        <img src="/images/logo_spark.png" alt="Cub Consulting Logo">
+      </a>
+      <nav class="navbar">
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="#section-banner"><span style="color: #D8BF9F; text-decoration: underline">Contact Us</span></a>
+        <a href="apply.html">Apply</a>
+      </nav>
+    </div>
+    <div class="banner-content">
+      <h1>CONTACT US</h1>
+      <p>Have questions or need more information? Get in touch with our team, and we'll be happy to assist you in any way we can.</p>
+    </div>
+  </section>
 
   <div class="content">
     <div id="client-form" class="form-section">
@@ -32,16 +32,7 @@
         <button id="applicant-button" onclick="switchForm('applicant')">Applicant</button>
       </div>
       <h2>Client Inquiries</h2>
-      <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
-      <form>
-        <div class="form-group">
-          <input type="text" id="client-name" name="name" placeholder="Name *" required>
-          <input type="email" id="client-email" name="email" placeholder="Email *" required>
-        </div>
-        <input type="text" id="client-subject" name="subject" placeholder="Subject *" required>
-        <textarea id="client-message" name="message" placeholder="Message *" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/appe9az0PpchNoBG7/shrmFDqjcEt5VXzHA" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
     </div>
 
     <div id="applicant-form" class="form-section" style="display: none;">
@@ -50,43 +41,40 @@
         <button id="applicant-button" class="active" onclick="switchForm('applicant')">Applicant</button>
       </div>
       <h2>Applicant Inquiries</h2>
-      <p>Leave your inquiry using the form below, and a member of our executive board will be in touch with you shortly.</p>
-      <form>
-        <div class="form-group">
-          <input type="text" id="applicant-name" name="name" placeholder="Name *" required>
-          <input type="email" id="applicant-email" name="email" placeholder="Email *" required>
-        </div>
-        <input type="text" id="applicant-subject" name="subject" placeholder="Subject *" required>
-        <input type="text" id="applicant-class-year" name="class-year" placeholder="Class Year (e.g., 2024) *" required>
-        <textarea id="applicant-message" name="message" placeholder="Message *" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/appe9az0PpchNoBG7/shrdm30Pr7C94Kl2B" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
     </div>
   </div>
 
   <footer class="footer">
     <div class="footer-content">
+      <!-- Left Side -->
       <div class="footer-left">
-        <h3>Let's work together!</h3>
-        <a href="mailto:cubconsultingteam@gmail.com" class="footer-email">cubconsultingteam@gmail.com</a>
-        <div class="social-icons">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-            <img src="images/Instagram Logo Transparent.png" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-            <img src="images/LinkedIn logo transparent.png" alt="LinkedIn">
-          </a>
+        <div class="work-together">
+          <h3>Let's Work Together!</h3>
+          <img src="/images/logo_spark.png" alt="Cub Consulting Logo" class="footer-logo">
         </div>
+        <div class="social-and-email">
+          <a href="https://www.instagram.com/cubconsulting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+            <img src="/images/Instagram Logo Transparent.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/company/cubconsultingberkeley/?viewAsMember=true" target="_blank" aria-label="LinkedIn">
+            <img src="/images/LinkedIn logo transparent.png" alt="LinkedIn">
+          </a>
+          <span>|</span>
+          <a href="mailto:cubconsulting@gmail.com" class="footer-email">cubconsulting@gmail.com</a>
+        </div>
+        <p class="copyright">&copy; Cub Consulting 2025.</p>
       </div>
+      <!-- Right Side -->
       <div class="footer-right">
+        <a href="contact.html" class="footer-button">Work with us →</a>
         <ul class="footer-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#our-team">Services</a></li>
-          <li><a href="#clients">Our Team</a></li>
-          <li><a href="#services">Contact Us</a></li>
-          <li><a href="#apply">Apply</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="#services-banner">Contact Us</a></li>
+          <li><a href="apply.html">Apply</a></li>
         </ul>
-        <a href="#contact" class="footer-button">Work with us →</a>
       </div>
     </div>
   </footer>

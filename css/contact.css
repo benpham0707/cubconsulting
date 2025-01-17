@@ -103,28 +103,30 @@ html {
   flex-wrap: wrap;
   padding: 60px 20px;
   text-align: center;
+  background: linear-gradient(180deg, white, #FFF9C7);
 }
 
 .form-section {
-  background: #FFF9C7;
-  border-radius: 15px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
-  padding: 40px;
-  max-width: 900px;
-  width: 100%;
-  position: relative;
-}
+    background: #1F628E; /* Navy blue */
+    color: #FFF9C7; /* Light yellow text */
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+  }
 
 .form-section h2 {
   font-size: 3.2rem;
-  color: #1F628E;
+  color: #FFF9C7; /* Light yellow */
   margin-bottom: 1rem;
   font-family: "Lilita One", sans-serif;
 }
 
 .form-section p {
-  color: #444;
+    color: #D8BF9F; /* Soft beige */
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
@@ -180,118 +182,156 @@ button:hover {
   background: #1565C0;
 }
 
-footer {
-  background: linear-gradient(180deg, white, #E3F2FD);
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.footer-left {
-  flex: 1;
-  text-align: left;
-}
-
-.footer-left h3 {
-  font-size: 1.8rem;
-  color: #1F628E;
-  margin-bottom: 1rem;
-  font-family: "Lilita One", sans-serif;
-}
-
-.footer-email {
-  font-size: 1rem;
-  color: #1565C0;
-  text-decoration: none;
-}
-
-.footer-email:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
-.footer-right {
-  flex: 1;
-  text-align: right;
-}
-
-.footer-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
-}
-
-.footer-nav a {
-  font-size: 1rem;
-  color: #1565C0;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  text-decoration: underline;
-}
-
-.footer-button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #1F628E;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.footer-button:hover {
-  background-color: #1565C0;
-}
-
 .toggle-buttons {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.toggle-buttons button {
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #1F628E;
-  color: white;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.toggle-buttons button.active {
-  background-color: #1565C0;
-}
+    position: absolute;
+    top: 20px; /* Adjust vertical positioning */
+    right: 20px; /* Adjust horizontal positioning */
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+  }
+  
+  .toggle-buttons button {
+    background: #FFF9C7; /* Beige background */
+    color: #1F628E; /* Navy blue text */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .toggle-buttons button:hover {
+    background: #D8BF9F; /* Light yellow on hover */
+  }
+  
+  .toggle-buttons .active {
+    background: #D8BF9F; /* Active state */
+    color: #1F628E; /* Navy blue text */
+  }
+  
+.footer {
+    background: #1F628E; /* Navy blue background */
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center; /* Center the footer content horizontally */
+    align-items: center;
+    text-align: center;
+    color: white; /* Default text color for footer */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: flex-start; /* Align content to the top */
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .footer-left {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between sections */
+  }
+  
+  .work-together {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and logo */
+  }
+  
+  .work-together h3 {
+    font-size: 1.8rem;
+    color: #FFF9C7; /* Light yellow text */
+    font-family: "Lilita One", sans-serif;
+    margin: 0;
+  }
+  
+  .footer-logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .social-and-email {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between items */
+  }
+  
+  .social-and-email img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-and-email img:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-and-email span {
+    font-size: 1rem;
+    color: #FFF9C7; /* Light yellow separator */
+  }
+  
+  .footer-email {
+    font-size: 1rem;
+    color: #D8BF9F; /* Lighter blue text for email */
+    text-decoration: none;
+  }
+  
+  .footer-email:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    gap: 15px; /* Space between button and nav links */
+  }
+  
+  .footer-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #FFF9C7; /* Light yellow button */
+    color: #1F628E; /* Navy blue text */
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .footer-button:hover {
+    background-color: #D8BF9F; /* Hover color for button */
+    color: white; /* Hover text color */
+  }
+  
+  .footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-nav a {
+    font-size: 1rem;
+    color: #FFF9C7; /* Light yellow links */
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+    color: #D8BF9F; /* Slightly lighter yellow on hover */
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: #FFF9C7; /* Light yellow text */
+    margin: 0;
+  }
