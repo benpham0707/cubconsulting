@@ -133,6 +133,150 @@ html {
     color: #1F628E; /* Navy text */
     margin: 0;
   }
+
+
+  .button-wrapper {
+    position: relative;
+    z-index: 3; /* Ensure it's above the bear paw trail */
+    background: #FFF9C7; /* Matches the section background to mask the trail */
+    padding: 5px 0; /* Minimal padding for spacing */
+    margin-top: -20px; /* Move closer to the title */
+    margin-bottom: 40px; /* Remove excess bottom margin */
+  }
+  
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+  
+  
+  .custom-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFF9C7;
+    background-color: #1F628E; /* Navy blue */
+    text-decoration: none;
+    border-radius: 5px;
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+  }
+  
+  .custom-button:hover {
+    background-color: #D8BF9F; /* Light tan hover effect */
+    transform: scale(1.05);
+  }
+  
+
+  .recruitment-wrapper {
+    background: linear-gradient(180deg, #FFF9C7, white); /* Section background */
+    width: 100%;
+    position: relative; /* For positioning the bear paw trail */
+  }
+  
+  .recruitment-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 80px; /* Adjusted to ensure no paws appear above the header */
+    left: 50%; /* Center the trail */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 50px; /* Adjust trail width as needed */
+    height: calc(100% - 80px); /* Adjust height to prevent overlap */
+    background-image: url('/images/Bear Paw Icon.png'); /* Replace with your bear paw image path */
+    background-repeat: repeat-y; /* Repeat vertically */
+    background-size: 40px 40px; /* Adjust size of each paw print */
+    z-index: 1; /* Ensure it sits behind the timeline content */
+  }
+  
+  
+  .recruitment-timeline {
+    position: relative; /* Ensure content stacks above the trail */
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  
+  .recruitment-timeline h2 {
+    font-size: 3.2rem;
+    color: #1F628E;
+    margin-bottom: 20px;
+    font-family: "Lilita One", sans-serif;
+    background: #FFF9C7; /* White background for the box */
+    padding: 10px 20px; /* Add padding for the box */
+    border-radius: 10px; /* Optional: Rounded corners */
+    z-index: 2; /* Ensure it is above the trail */
+    display: inline-block; /* To make the box fit only the content */
+    position: relative; /* Position to ensure z-index works */
+    
+  }
+  
+  
+  .timeline-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between; /* Added spacing between entries */
+    margin-bottom: 40px;
+    gap: 50px; /* Increased gap */
+  }
+  
+  .timeline-entry .timeline-text {
+    flex: 1;
+    max-width: 600px; /* Increased width for text */
+    text-align: left;
+    padding: 20px 65px;
+  }
+  
+  .timeline-entry .timeline-image {
+    flex: 1;
+    max-width: 600px; /* Increased width for images */
+    text-align: center;
+  }
+  
+  .timeline-entry .timeline-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-text h3 {
+    font-size: 1.8rem;
+    color: #1F628E;
+    margin-bottom: 10px;
+    font-family: "Lilita One", sans-serif;
+  }
+  
+  .timeline-text p {
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .timeline-entry .timeline-text .location {
+    font-weight: bold;
+    color: #1F628E;
+    font-size: 1rem; /* Slightly smaller than the description */
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-entry {
+      flex-direction: column;
+    }
+    .timeline-text, .timeline-image {
+      max-width: 100%;
+    }
+  }
+  
   
 
   .faq-section {

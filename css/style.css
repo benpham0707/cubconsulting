@@ -102,20 +102,22 @@ body, html {
 }
 
 .get-started-button {
-  padding: 12px 24px;
-  background: #D8BF9F;
-  color: #1F628E;
-  border-radius: 25px;
+  padding: 10px 20px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #FFF9C7;
+  background-color: #1F628E; /* Navy blue */
   text-decoration: none;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  margin: 5px;
 }
 
 .get-started-button:hover {
-  background: #FFF9C7;
-  color: #1F628E;
+  background-color: #FFF9C7;
+  color: #1F628E; /* Light tan hover effect */
 }
 
 
