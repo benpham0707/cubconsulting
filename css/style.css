@@ -371,3 +371,125 @@ section {
 
 
 
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* General adjustments */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Banner Section */
+  .banner {
+    height: 80vh; /* Adjust height for mobile screens */
+    padding: 20px;
+  }
+
+  .banner-navbar {
+    flex-direction: column; /* Stack the navbar links */
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px; /* Reduce space between links */
+    margin-right: 0;
+    text-align: left; /* Align navbar text to the left */
+  }
+
+  .navbar a {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .banner-content h1 {
+    font-size: 2.5rem; /* Reduce size for better fit */
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .get-started-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  /* Skills Section */
+  .skills-row {
+    flex-direction: column; /* Stack skills vertically */
+    gap: 1rem;
+    font-size: 2.5rem; /* Reduce font size */
+  }
+
+  .paw-icon {
+    width: 100px; /* Adjust paw icon size */
+  }
+
+  /* Mission Section */
+  .mission-section .section-title {
+    font-size: 2.5rem;
+  }
+
+  .mission-section .section-description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Who We Are Section */
+  .who-we-are,
+  .what-we-offer {
+    flex-direction: column; /* Stack text and image vertically */
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .who-content,
+  .offer-content {
+    flex-direction: column; /* Stack content */
+    gap: 1.5rem;
+  }
+
+  .who-content h2,
+  .offer-content h2 {
+    font-size: 2.5rem; /* Smaller titles */
+  }
+
+  .who-content p,
+  .offer-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .who-content .image-container img,
+  .offer-content .image-container img {
+    max-width: 100%; /* Ensure images fit within the screen */
+  }
+
+  /* Footer Section */
+  .footer-content {
+    flex-direction: column; /* Stack footer sections */
+    gap: 2rem;
+    text-align: center; /* Center align for mobile */
+  }
+
+  .footer-left,
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-button {
+    width: 100%; /* Full-width button */
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: column; /* Stack nav links */
+    gap: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
