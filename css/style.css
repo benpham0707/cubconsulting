@@ -387,24 +387,51 @@ section {
   }
 
   .banner-navbar {
-    flex-direction: column; /* Stack the navbar links */
-    align-items: flex-start;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #FFF9C7;
+    cursor: pointer;
   }
 
   .navbar {
-    flex-direction: column;
-    gap: 10px; /* Reduce space between links */
-    margin-right: 0;
-    text-align: left; /* Align navbar text to the left */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    background: rgba(31, 98, 142, 0.9); /* Semi-transparent background */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 10;
+    text-align: center;
+  }
+
+  .navbar.active {
+    display: flex; /* Show navbar on toggle */
   }
 
   .navbar a {
     font-size: 14px; /* Smaller font size for mobile */
+    padding: 0.5rem 0;
+    color: #FFF9C7;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    color: #D8BF9F; /* Hover effect */
   }
 
   .banner-content h1 {
-    font-size: 2.5rem; /* Reduce size for better fit */
+    font-size: 2.5rem; /* Adjust font size for mobile */
   }
 
   .banner-content p {
@@ -442,18 +469,18 @@ section {
   .who-we-are,
   .what-we-offer {
     flex-direction: column; /* Stack text and image vertically */
-    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    padding: 2rem 1rem; /* Reduce padding */
   }
 
   .who-content,
   .offer-content {
-    flex-direction: column; /* Stack content */
+    flex-direction: column;
     gap: 1.5rem;
   }
 
   .who-content h2,
   .offer-content h2 {
-    font-size: 2.5rem; /* Smaller titles */
+    font-size: 2.5rem;
   }
 
   .who-content p,
@@ -464,14 +491,15 @@ section {
 
   .who-content .image-container img,
   .offer-content .image-container img {
-    max-width: 100%; /* Ensure images fit within the screen */
+    max-width: 100%;
+    border-radius: 10px;
   }
 
   /* Footer Section */
   .footer-content {
     flex-direction: column; /* Stack footer sections */
     gap: 2rem;
-    text-align: center; /* Center align for mobile */
+    text-align: center;
   }
 
   .footer-left,
@@ -490,6 +518,7 @@ section {
   }
 
   .footer-nav a {
-    font-size: 0.9rem; /* Smaller font size */
+    font-size: 0.9rem;
   }
 }
+
