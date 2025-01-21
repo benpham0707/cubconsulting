@@ -383,32 +383,35 @@ section {
 
   /* Navbar adjustments */
   .banner-navbar {
-    flex-direction: row; /* Navbar in a single row */
-    justify-content: space-between; /* Align logo and links */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    z-index: 1000; /* Ensure navbar is above the banner */
+    position: fixed;
+    width: 100%;
   }
 
   .banner-navbar .logo img {
-    height: 60px; /* Reduce logo size for mobile */
-    margin-left: 0; /* Align logo to the left */
+    height: 50px;
+    margin-left: 0;
   }
 
   .navbar {
     flex-direction: column;
     gap: 10px;
-    background-color: rgba(31, 98, 142, 0.9); /* Add background to navbar */
-    padding: 10px;
+    background-color: rgba(31, 98, 142, 0.9);
+    padding: 15px;
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
-    display: none; /* Hidden by default */
+    display: none;
     z-index: 1000;
   }
 
   .navbar.active {
-    display: flex; /* Show navbar on toggle */
+    display: flex; /* Show navbar when toggled */
   }
 
   .navbar a {
@@ -428,15 +431,15 @@ section {
     display: block;
     background: transparent;
     border: none;
-    color: white;
-    font-size: 1.5rem;
+    color: #1f628e;
+    font-size: 1.8rem;
     cursor: pointer;
   }
 
   /* Banner adjustments */
   .banner {
-    height: 80vh; /* Adjust height */
-    padding: 10px;
+    height: 80vh;
+    padding-top: 70px; /* Account for fixed navbar height */
   }
 
   .banner-content h1 {
@@ -448,49 +451,126 @@ section {
   }
 
   .get-started-button {
+    font-size: .7rem;
+    padding: 8px;
+  }
+
+  /* Strategy, Marketing, Design Section */
+  .skills-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 2rem;
+    padding: 20px 0;
+  }
+
+  .paw-icon {
+    width: 80px;
+    height: auto;
+  }
+
+  /* "Who Are We?" and "What Do We Offer?" adjustments */
+  .who-we-are,
+  .what-we-offer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .who-content,
+  .offer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .who-content h2,
+  .offer-content h2 {
+    font-size: 2rem;
+    color: #1f628e;
+  }
+
+  .who-content p,
+  .offer-content p {
     font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  .who-content .image-container img,
+  .offer-content .image-container img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   /* Footer adjustments */
   .footer-content {
-    flex-direction: column; /* Stack footer sections */
-    align-items: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #1f628e;
+    color: white;
   }
 
   .footer-left,
   .footer-right {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    text-align: center;
   }
 
   .footer-left .social-and-email {
-    flex-direction: column; /* Stack social links and email */
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
   .footer-left .work-together {
-    text-align: center; /* Center align "Let's Work Together" */
+    text-align: center;
+    color: #fff9c7;
   }
 
   .footer-logo {
     margin: 10px auto;
-    height: 50px; /* Adjust logo size */
+    height: 50px;
   }
 
   .footer-nav {
-    flex-direction: column; /* Stack nav links */
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .footer-nav a {
     font-size: 1rem;
+    color: #fff9c7;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
   }
 
   .footer-button {
-    width: 100%;
+    background-color: #fff9c7;
+    color: #1f628e;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
     font-size: 1rem;
+  }
+
+  .footer-button:hover {
+    background-color: #d8bf9f;
+    color: white;
   }
 }
 
