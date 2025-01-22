@@ -177,30 +177,8 @@ body, html {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-  }
 
-  .service-card {
-    width: 90%; /* Make cards responsive */
-    height: auto; /* Allow height to adjust dynamically for smaller screens */
-  }
-}
 
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .banner-navbar .logo img {
-    height: 70px;
-  }
-
-  .navbar {
-    gap: 1rem;
-  }
-}
 
 .project-breakdown-section {
     background: linear-gradient(180deg, #FFF9C7, white);
@@ -367,29 +345,48 @@ body, html {
   
   .social-and-email {
     display: flex;
-    align-items: center;
-    gap: 10px; /* Space between items */
+    align-items: left; /* Align items vertically */
+    gap: 10px; /* Space between icons and email */
+    justify-content: left; /* Center alignment */
   }
   
-  .social-and-email img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-and-email img:hover {
-    transform: scale(1.2);
-  }
-  
-  .social-and-email span {
-    font-size: 1rem;
-    color: #FFF9C7; /* Light yellow separator */
+  .social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    justify-content: center;
   }
   
   .footer-email {
     font-size: 1rem;
     color: #D8BF9F; /* Lighter blue text for email */
     text-decoration: none;
+    margin: 0; /* Reset margins */
+    text-align: left; /* Left align the email */
+    display: inline-block; /* Ensure it aligns with the icons */
+  }
+  
+  .footer-email:hover {
+    text-decoration: underline;
+  }
+  
+  .social-and-email img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+  }
+  
+  .social-and-email img:hover {
+    transform: scale(1.4);
+  }
+  
+  .footer-email {
+    font-size: 1rem;
+    color: #D8BF9F; /* Lighter blue text for email */
+    text-decoration: none;
+    margin-top: 10px; /* Move email below social icons */
+    display: block; /* Ensure it appears on a new line */
+    text-align: center; /* Center the email on mobile */
   }
   
   .footer-email:hover {
@@ -444,3 +441,180 @@ body, html {
     color: #FFF9C7; /* Light yellow text */
     margin: 0;
   }
+
+  .menu-toggle {
+    display: none; /* Hide by default */
+    background: transparent;
+    border: none;
+    color: #1f628e;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    /* General adjustments */
+    body, html {
+      overflow-x: hidden;
+    }
+    
+    .services-grid {
+      grid-template-columns: repeat(1, 1fr); /* 2 columns for small screens */
+      gap: 1rem; /* Reduce spacing between cards */
+    }
+  
+    .service-card {
+      padding: 15px;
+      font-size: 0.9rem; /* Slightly smaller font */
+    }
+  
+    .service-card h3 {
+      font-size: 1.4rem; /* Slightly smaller header */
+    }
+  
+    .service-card img {
+      width: 50px; /* Smaller icons */
+    }
+    
+  
+    /* Navbar adjustments */
+    .banner-navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000; /* Ensure navbar is above the banner */
+      position: absolute;
+      width: 100%;
+      background-color: #1f628e;
+    }
+  
+    .banner-navbar .logo img {
+      height: 50px;
+      margin-left: 0;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+      background-color: rgba(31, 98, 142, 0.9);
+      padding: 15px;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      display: none;
+      z-index: 999;
+    }
+  
+    .navbar.active {
+      display: flex; /* Show navbar when toggled */
+    }
+  
+    .navbar a {
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+  
+    .navbar a:hover {
+      background-color: #d8bf9f;
+      color: #1f628e;
+    }
+  
+    /* Add toggle button for navbar */
+  .menu-toggle {
+    display: block; /* Hide by default */
+    background: transparent;
+    border: none;
+    color: #FFF9C7;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+    /* Banner adjustments */
+    .banner {
+      height: 80vh;
+      padding-top: 70px; /* Account for fixed navbar height */
+    }
+  
+    .banner-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    .get-started-button {
+      font-size: .7rem;
+      padding: 8px;
+    }
+  
+    /* Strategy, Marketing, Design Section */
+
+
+  
+    /* "Who Are We?" and "What Do We Offer?" adjustments */
+
+
+  
+    /* Footer adjustments */
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .work-together {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      margin-top: 10px;
+    }
+  
+    .social-and-email {
+      flex-direction: column; /* Stack elements vertically */
+      gap: 15px; /* Add space between icons and email */
+    }
+  
+    .social-icons {
+      justify-content: center; /* Ensure icons are centered */
+    }
+  
+    .footer-email {
+      margin-top: 0; /* Reset margin to ensure consistency */
+    }
+  
+    .footer-email {
+      margin-top: 10px; /* Separate email from social icons */
+      display: block; /* Force email to a new line */
+      text-align: center; /* Center the email */
+    }
+  
+    .footer-right {
+      gap: 10px;
+    }
+  
+    .footer-button {
+      width: 100%; /* Full width button on mobile */
+      text-align: center;
+    }
+  
+    .footer-nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

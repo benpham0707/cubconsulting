@@ -243,6 +243,7 @@ section {
 }
 
 /* Footer Section */
+/* Footer Section */
 .footer {
   background: #1F628E; /* Navy blue background */
   padding: 3rem 2rem;
@@ -290,29 +291,48 @@ section {
 
 .social-and-email {
   display: flex;
-  align-items: center;
-  gap: 10px; /* Space between items */
+  align-items: left; /* Align items vertically */
+  gap: 10px; /* Space between icons and email */
+  justify-content: left; /* Center alignment */
 }
 
-.social-and-email img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.social-and-email img:hover {
-  transform: scale(1.2);
-}
-
-.social-and-email span {
-  font-size: 1rem;
-  color: #FFF9C7; /* Light yellow separator */
+.social-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  justify-content: center;
 }
 
 .footer-email {
   font-size: 1rem;
   color: #D8BF9F; /* Lighter blue text for email */
   text-decoration: none;
+  margin: 0; /* Reset margins */
+  text-align: left; /* Left align the email */
+  display: inline-block; /* Ensure it aligns with the icons */
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.social-and-email img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
+}
+
+.social-and-email img:hover {
+  transform: scale(1.4);
+}
+
+.footer-email {
+  font-size: 1rem;
+  color: #D8BF9F; /* Lighter blue text for email */
+  text-decoration: none;
+  margin-top: 10px; /* Move email below social icons */
+  display: block; /* Ensure it appears on a new line */
+  text-align: center; /* Center the email on mobile */
 }
 
 .footer-email:hover {
@@ -368,6 +388,15 @@ section {
   margin: 0;
 }
 
+.menu-toggle {
+  display: none; /* Hide by default */
+  background: transparent;
+  border: none;
+  color: #1f628e;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 
 
 
@@ -388,8 +417,9 @@ section {
     align-items: center;
     padding: 10px 20px;
     z-index: 1000; /* Ensure navbar is above the banner */
-    position: fixed;
+    position: absolute;
     width: 100%;
+    background-color: #1f628e;
   }
 
   .banner-navbar .logo img {
@@ -407,7 +437,7 @@ section {
     left: 0;
     width: 100%;
     display: none;
-    z-index: 1000;
+    z-index: 999;
   }
 
   .navbar.active {
@@ -427,14 +457,14 @@ section {
   }
 
   /* Add toggle button for navbar */
-  .menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    color: #1f628e;
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
+.menu-toggle {
+  display: block; /* Hide by default */
+  background: transparent;
+  border: none;
+  color: #FFF9C7;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
   /* Banner adjustments */
   .banner {
@@ -509,68 +539,60 @@ section {
 
   /* Footer adjustments */
   .footer-content {
-    display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    padding: 20px;
-    background-color: #1f628e;
-    color: white;
+    align-items: center;
   }
 
   .footer-left,
   .footer-right {
-    flex-direction: column;
-    gap: 15px;
     text-align: center;
-  }
-
-  .footer-left .social-and-email {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
-  .footer-left .work-together {
+  .work-together {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #fff9c7;
   }
 
   .footer-logo {
-    margin: 10px auto;
-    height: 50px;
+    margin-top: 10px;
   }
 
-  .footer-nav {
-    display: flex;
-    flex-direction: column;
+  .social-and-email {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Add space between icons and email */
+  }
+
+  .social-icons {
+    justify-content: center; /* Ensure icons are centered */
+  }
+
+  .footer-email {
+    margin-top: 0; /* Reset margin to ensure consistency */
+  }
+
+  .footer-email {
+    margin-top: 10px; /* Separate email from social icons */
+    display: block; /* Force email to a new line */
+    text-align: center; /* Center the email */
+  }
+
+  .footer-right {
     gap: 10px;
   }
 
-  .footer-nav a {
-    font-size: 1rem;
-    color: #fff9c7;
-    text-decoration: none;
-  }
-
-  .footer-nav a:hover {
-    text-decoration: underline;
-  }
-
   .footer-button {
-    background-color: #fff9c7;
-    color: #1f628e;
-    padding: 10px;
-    border-radius: 20px;
+    width: 100%; /* Full width button on mobile */
     text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 1rem;
   }
 
-  .footer-button:hover {
-    background-color: #d8bf9f;
-    color: white;
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

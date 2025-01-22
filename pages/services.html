@@ -14,6 +14,9 @@
       <a href="/index.html" class="logo">
         <img src="/images/logo_spark.png" alt="Cub Consulting Logo">
       </a>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        &#9776;
+      </button>
       <nav class="navbar">
         <a href="/index.html">Home</a>
         <a href="#services-banner"><span style="color: #D8BF9F; text-decoration: underline">Services</span></a>
@@ -181,31 +184,32 @@
   
   
   <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-content fade-in">
       <!-- Left Side -->
       <div class="footer-left">
         <div class="work-together">
-          <h3>Let's Work Together!</h3>
-          <img src="/images/logo_spark.png" alt="Cub Consulting Logo" class="footer-logo">
+          <h3 class="fade-in">Let's Work Together!</h3>
+          <img src="/images/logo_spark.png" alt="Cub Consulting Logo" class="footer-logo fade-in">
         </div>
-        <div class="social-and-email">
-          <a href="https://www.instagram.com/cubconsulting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
-            <img src="/images/Instagram Logo Transparent.png" alt="Instagram">
-          </a>
-          <a href="https://www.linkedin.com/company/cubconsultingberkeley/?viewAsMember=true" target="_blank" aria-label="LinkedIn">
-            <img src="/images/LinkedIn logo transparent.png" alt="LinkedIn">
-          </a>
-          <span>|</span>
-          <a href="mailto:calcubconsulting@gmail.com" class="footer-email">calcubconsulting@gmail.com</a>
+        <div class="social-and-email fade-in">
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cubconsulting?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+              <img src="/images/Instagram Logo Transparent.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/cubconsultingberkeley/?viewAsMember=true" target="_blank" aria-label="LinkedIn">
+              <img src="/images/LinkedIn logo transparent.png" alt="LinkedIn">
+            </a>
+          </div>
+          <a href="mailto:calcubconsulting@gmail.com" class="footer-email fade-in">calcubconsulting@gmail.com</a>
         </div>
-        <p class="copyright">&copy; Cub Consulting 2025.</p>
+        <p class="copyright fade-in">&copy; Cub Consulting 2025.</p>
       </div>
       <!-- Right Side -->
-      <div class="footer-right">
-        <a href="contact.html" class="footer-button">Work with us →</a>
-        <ul class="footer-nav">
+      <div class="footer-right fade-in">
+        <a href="contact.html" class="footer-button fade-in">Work with us →</a>
+        <ul class="footer-nav fade-in">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="#services-banner">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="team.html">Our Team</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="apply.html">Join Us</a></li>
@@ -213,6 +217,15 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+  
+    toggleButton.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
   
 </body>
 </html>
