@@ -267,6 +267,15 @@ html {
     color: #1F628E;
     font-size: 1rem; /* Slightly smaller than the description */
   }
+
+  .menu-toggle {
+    display: none; /* Hide by default */
+    background: transparent;
+    border: none;
+    color: #1f628e;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
   
   @media (max-width: 768px) {
     .timeline-entry {
