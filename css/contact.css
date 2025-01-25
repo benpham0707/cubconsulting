@@ -356,7 +356,7 @@ button:hover {
   }
 
   .menu-toggle {
-    display: block;
+    display: none;
     background: none; /* Remove any background */
     border: none; /* Remove any border */
     color: #FFF9C7; /* Keep the icon color */
